@@ -20,7 +20,6 @@ import com.google.firebase.auth.FirebaseUser;
 public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private static String TAG = "RegisterActivity";
-    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         mAuth = FirebaseAuth.getInstance();
-
-        intent = new Intent(getApplicationContext(), SuccessActivity.class);
+        Intent intent = new Intent(getApplicationContext(), SuccessActivity.class);
 
         EditText etUserEmail = findViewById(R.id.etUserEmail);
         EditText etUserPwd = findViewById(R.id.etUserPwd);
@@ -53,21 +51,23 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 // 모든 정보 올바름
                 else {
-                    mAuth.signInWithEmailAndPassword(UserEmail, UserPwd)
+                    mAuth.createUserWithEmailAndPassword(UserEmail, UserPwd)
                             .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-                                        Log.d(TAG, "signInWithEmail:success");
+                                        // Sign in success, update UI with the signed-in user's information
+                                        Log.d(TAG, "createUserWithEmail:success");
                                         FirebaseUser user = mAuth.getCurrentUser();
 
-                                        finish();
+                                        Intent intent = new Intent(getApplicationContext(), SuccessActivity.class);
+                                        startActivity(intent);
+                                    } else {
+                                        // If sign in fails, display a message to the user.
+                                        Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                                        Toast.makeText(RegisterActivity.this, "Authentication failed.",
+                                                Toast.LENGTH_SHORT).show();
                                     }
-                                    else {
-                                        Log.w(TAG, "signInWithEmail:failure", task.getException());
-                                        Toast.makeText(RegisterActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
-                                    }
-
                                 }
                             });
                 }
