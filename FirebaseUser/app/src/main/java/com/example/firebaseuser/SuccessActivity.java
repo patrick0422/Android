@@ -41,6 +41,12 @@ public class SuccessActivity extends AppCompatActivity {
     }
     private void initUserInfo() {
         FirebaseUser user = mAuth.getCurrentUser();
-        tvUserId.setText(user.getUid());
+        if (user == null) {
+            Toast.makeText(getApplicationContext(), "로그인되어있지 않습니다.", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else {
+            tvUserId.setText(user.getEmail());
+        }
     }
 }
