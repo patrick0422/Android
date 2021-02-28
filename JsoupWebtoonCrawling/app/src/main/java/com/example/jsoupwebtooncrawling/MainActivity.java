@@ -2,6 +2,7 @@ package com.example.jsoupwebtooncrawling;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,13 +17,18 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private String[] week = { "mon", "tue", "wed", "thu", "fri", "sat", "sun" };
     private String TargetURL = "https://comic.naver.com/webtoon/weekdayList.nhn?week=";
     private String TAG = "JsoupWebtoonCrawling";
-    private Button btn1;
     private String htmlContentInStringFormat="";
+
+    ArrayList<Webtoon> webtoons = new ArrayList<>();
+
+    private Button btn1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 JsoupAsyncTask jsoupAsyncTask = new JsoupAsyncTask();
                 jsoupAsyncTask.execute();
+
+                Intent intent = new Intent(getApplicationContext(), WebtoonActivity.class);
+                intent.putExtra("webtoons", webtoons);
+                startActivity(intent);
             }
         });
     }
@@ -49,16 +59,22 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... params) {
             try {
-                int i = 0;
-                Document doc = Jsoup.connect(TargetURL + week[i]).get();
+                int dayOfWeek = 0;
+                Document doc = Jsoup.connect(TargetURL + week[dayOfWeek]).get();
 
-                //테스트1
-                Elements titles= doc.select("ul.img_list li dl dt a");
+                Elements titles= doc.select("ul.img_list li");
 
                 System.out.println("-------------------------------------------------------------");
-                for(Element e: titles){
-                    System.out.println("title: " + e.text());
-                    htmlContentInStringFormat += e.text().trim() + "\n";
+                for(Element e: titles) {
+                    htmlContentInStringFormat += e.attr("title").trim() + "\n";
+
+                    String title = e.attr("title");
+                    String writer = e.select("dl dd.desc a").text();
+                    String star = e.select("dl dd div.rating_type strong").text();
+                    String thumbnailSrc = e.select("div.thumb a img").attr("src");
+                    String webtoonURL = "https://comic.naver.com" + e.select("div.thumb a").attr("href");
+
+                    webtoons.add(new Webtoon(title, writer, star, thumbnailSrc, webtoonURL));
                 }
                 Log.d(TAG, htmlContentInStringFormat);
             } catch (IOException e) {
