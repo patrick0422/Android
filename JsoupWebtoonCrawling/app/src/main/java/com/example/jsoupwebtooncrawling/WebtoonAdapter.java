@@ -16,10 +16,10 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class WebtoonAdapter extends BaseAdapter {
-    private ArrayList<Webtoon> webtoonItems = new ArrayList<>();
+    private ArrayList<Webtoon> webtoonItems;
 
-    public WebtoonAdapter() {
-
+    public WebtoonAdapter(ArrayList<Webtoon> webtoons) {
+        webtoonItems = webtoons;
     }
 
     @Override
@@ -36,10 +36,10 @@ public class WebtoonAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.webtoon_layout, parent, false);
         }
 
-        ImageView thumbnail = (ImageView)convertView.findViewById(R.id.thumbnail);
-        TextView title = (TextView)convertView.findViewById(R.id.webtoonTitle);
-        TextView writer = (TextView)convertView.findViewById(R.id.writer);
-        TextView star = (TextView)convertView.findViewById(R.id.star);
+        ImageView thumbnail = convertView.findViewById(R.id.thumbnail);
+        TextView title = convertView.findViewById(R.id.webtoonTitle);
+        TextView writer = convertView.findViewById(R.id.writer);
+        TextView star = convertView.findViewById(R.id.star);
 
         Webtoon webtoon = webtoonItems.get(position);
 
