@@ -11,6 +11,7 @@ public class Webtoon implements Serializable {
     private String thumbnailSrc;
     private String webtoonURL;
 
+    public Webtoon() {}
     public Webtoon(String title, String writer, String star, String thumbnailSrc, String webtoonURL) {
         this.title = title;
         this.writer = writer;

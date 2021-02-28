@@ -21,10 +21,64 @@
             android:layout_height="match_parent"
             android:textSize="25dp"
             android:text="검색"/>
+<!--        <ImageButton-->
+<!--            android:id="@+id/btnRefresh"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:src="@drawable/ic_launcher_foreground"/>-->
     </LinearLayout>
-    <ListView
-        android:id="@+id/lvWebtoon"
+    <RadioGroup
+        android:id="@+id/rg1"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rbMon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="월"/>
+        <RadioButton
+            android:id="@+id/rbTue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="화"/>
+        <RadioButton
+            android:id="@+id/rbWed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="수"/>
+        <RadioButton
+            android:id="@+id/rbThu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="목"/>
+        <RadioButton
+            android:id="@+id/rbFri"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="금"/>
+        <RadioButton
+            android:id="@+id/rbSat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="토"/>
+        <RadioButton
+            android:id="@+id/rbSun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="일"/>
+    </RadioGroup>
+    <ListView
+        android:id="@+id/webtoonList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AAAADD"/>
 </LinearLayout>

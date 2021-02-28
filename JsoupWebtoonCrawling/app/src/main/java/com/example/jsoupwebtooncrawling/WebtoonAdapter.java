@@ -60,8 +60,4 @@ public class WebtoonAdapter extends BaseAdapter {
     public Object getItem(int position) {
         return webtoonItems.get(position);
     }
-
-    public void addItem() {
-
-    }
 }
