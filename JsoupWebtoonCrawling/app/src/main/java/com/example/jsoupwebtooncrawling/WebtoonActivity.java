@@ -63,10 +63,7 @@ public class WebtoonActivity extends AppCompatActivity {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (rg1.getVisibility() == GONE)
-                    rg1.setVisibility(VISIBLE);
-//                else
-//                    rg1.setVisibility(GONE);
+
             }
         });
 
@@ -101,13 +98,11 @@ public class WebtoonActivity extends AppCompatActivity {
 
         // 5. 요일 선택 시 이벤트
         rg1 = findViewById(R.id.rg1);
-        rg1.setVisibility(GONE);
         rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton rb = findViewById(rg1.getCheckedRadioButtonId());
-
-                Log.d(TAG, "OnCheckedChangeListener() Called");
+                
                 switch(rb.getText().toString()) {
                     case "월":
                         dayOfWeek = 0;
@@ -134,7 +129,7 @@ public class WebtoonActivity extends AppCompatActivity {
 
                 jsoupAsyncTask = new WebtoonActivity.JsoupAsyncTask();
                 jsoupAsyncTask.execute();
-                Log.d(TAG, "WebtoonActivity.java-Line: 136에서 execute() Call");
+                Log.d(TAG, "rg1의 onCheckedChangeListener()에서 execute() Call");
             }
         });
 
