@@ -2,6 +2,7 @@ package com.example.jsoupwebtooncrawling;
 
 import android.content.Context;
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,11 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class WebtoonAdapter extends BaseAdapter {
+    private String TAG = "JsoupWebtoon";
+
     private ArrayList<Webtoon> webtoonItems;
+    private LayoutInflater inflater = null;
+    private Context context;
 
     public WebtoonAdapter(ArrayList<Webtoon> webtoons) {
         webtoonItems = webtoons;
@@ -24,15 +29,19 @@ public class WebtoonAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
+        Log.d(TAG, "getCount() called, size: " + Integer.toString(webtoonItems.size()));
         return webtoonItems.size();
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final Context context = parent.getContext();
+
 
         if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            context = parent.getContext();
+            if (inflater == null) {
+                inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            }
             convertView = inflater.inflate(R.layout.webtoon_layout, parent, false);
         }
 
@@ -47,6 +56,7 @@ public class WebtoonAdapter extends BaseAdapter {
         title.setText(webtoon.Title());
         writer.setText(webtoon.Writer());
         star.setText(webtoon.Star());
+        Log.d(TAG, "getView(): " + webtoon.Title() + " 추가 완료");
 
         return convertView;
     }

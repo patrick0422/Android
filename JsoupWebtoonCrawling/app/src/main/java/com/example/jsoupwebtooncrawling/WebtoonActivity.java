@@ -39,6 +39,7 @@ public class WebtoonActivity extends AppCompatActivity {
     private String[] weekKor = { "월", "화", "수", "목", "금", "토", "일" };
 
     private ArrayList<Webtoon> webtoons = new ArrayList<>();
+    private WebtoonAdapter adapter;
     private WebtoonActivity.JsoupAsyncTask jsoupAsyncTask;
 
     private EditText etSearch;
@@ -54,8 +55,6 @@ public class WebtoonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webtoon);
-        jsoupAsyncTask = new WebtoonActivity.JsoupAsyncTask();
-        jsoupAsyncTask.execute();
 
         //1
         etSearch = findViewById(R.id.etSearch);
@@ -72,11 +71,12 @@ public class WebtoonActivity extends AppCompatActivity {
         });
 
         // 3. 리스트 아이템 선택시 이벤트
-        list = findViewById(R.id.webtoonList);
         jsoupAsyncTask = new WebtoonActivity.JsoupAsyncTask();
         jsoupAsyncTask.execute();
+        Log.d(TAG, "WebtoonActivity.java-Line: 75에서 execute() Call, webtoons.size():" + webtoons.size());
 
-        WebtoonAdapter adapter = new WebtoonAdapter(webtoons);
+        adapter = new WebtoonAdapter(webtoons);
+        list = findViewById(R.id.webtoonList);
         list.setAdapter(adapter);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -107,6 +107,7 @@ public class WebtoonActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton rb = findViewById(rg1.getCheckedRadioButtonId());
 
+                Log.d(TAG, "OnCheckedChangeListener() Called");
                 switch(rb.getText().toString()) {
                     case "월":
                         dayOfWeek = 0;
@@ -130,18 +131,16 @@ public class WebtoonActivity extends AppCompatActivity {
                         dayOfWeek = 6;
                         break;
                 }
-                jsoupAsyncTask = new WebtoonActivity.JsoupAsyncTask();
-                webtoons.clear();
-                Log.d(TAG, "webtoons 초기화 완료");
-                jsoupAsyncTask.execute();
 
-                list.setVisibility(VISIBLE);
+                jsoupAsyncTask = new WebtoonActivity.JsoupAsyncTask();
+                jsoupAsyncTask.execute();
+                Log.d(TAG, "WebtoonActivity.java-Line: 136에서 execute() Call");
             }
         });
 
-        list.setAdapter(new WebtoonAdapter(webtoons));
-    }
+        //
 
+    }
 
 
 
@@ -159,10 +158,12 @@ public class WebtoonActivity extends AppCompatActivity {
         protected Void doInBackground(Void... params) {
             try {
                 doc = Jsoup.connect(TargetURL + week[dayOfWeek]).get();
-                Log.d(TAG, "doc 초기화 완료");
+
+                // 리스트 초기화
+                webtoons.clear();
+                Log.d(TAG, "리스트 초기화 완료");
 
                 titles = doc.select("ul.img_list li");
-                Log.d(TAG, "titles 초기화 완료");
 
                 for(Element e: titles) {
                     Webtoon webtoon = new Webtoon(
@@ -178,7 +179,7 @@ public class WebtoonActivity extends AppCompatActivity {
                             "https://comic.naver.com" + e.select("div.thumb a").attr("href")
                     );
                     webtoons.add(webtoon);
-                    Log.d(TAG, webtoon.toString() + " 저장 완료");
+                    list.deferNotifyDataSetChanged();
                 }
                 Log.d(TAG, weekKor[dayOfWeek] + "요일 웹툰 목록 저장 완료");
             } catch (IOException e) {
@@ -190,7 +191,7 @@ public class WebtoonActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void result) {
-
+            adapter.notifyDataSetChanged();
         }
     }
 }
