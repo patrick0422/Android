@@ -22,6 +22,7 @@
             android:textSize="25dp"
             android:text="검색"/>
     </LinearLayout>
+
     <ListView
         android:id="@+id/lvWebtoon"
         android:layout_width="match_parent"

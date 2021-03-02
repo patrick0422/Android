@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -34,6 +35,12 @@ public class WebtoonActivity extends AppCompatActivity {
 
         etSearch = findViewById(R.id.etSearch);
         btnSearch = findViewById(R.id.btnSearch);
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "아직 안만듬", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         list = findViewById(R.id.lvWebtoon);
         final WebtoonAdapter adapter = new WebtoonAdapter(webtoons);
