@@ -28,10 +28,7 @@ public class WebtoonAdapter extends BaseAdapter {
     }
 
     @Override
-    public int getCount() {
-        Log.d(TAG, "getCount() called, size: " + Integer.toString(webtoonItems.size()));
-        return webtoonItems.size();
-    }
+    public int getCount() { return webtoonItems.size(); }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -56,7 +53,6 @@ public class WebtoonAdapter extends BaseAdapter {
         title.setText(webtoon.Title());
         writer.setText(webtoon.Writer());
         star.setText(webtoon.Star());
-        Log.d(TAG, "getView(): " + webtoon.Title() + " 추가 완료");
 
         return convertView;
     }

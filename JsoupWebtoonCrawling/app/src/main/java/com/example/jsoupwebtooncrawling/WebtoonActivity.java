@@ -70,7 +70,6 @@ public class WebtoonActivity extends AppCompatActivity {
         // 3. 리스트 아이템 선택시 이벤트
         jsoupAsyncTask = new WebtoonActivity.JsoupAsyncTask();
         jsoupAsyncTask.execute();
-        Log.d(TAG, "WebtoonActivity.java-Line: 75에서 execute() Call, webtoons.size():" + webtoons.size());
 
         adapter = new WebtoonAdapter(webtoons);
         list = findViewById(R.id.webtoonList);
@@ -129,7 +128,6 @@ public class WebtoonActivity extends AppCompatActivity {
 
                 jsoupAsyncTask = new WebtoonActivity.JsoupAsyncTask();
                 jsoupAsyncTask.execute();
-                Log.d(TAG, "rg1의 onCheckedChangeListener()에서 execute() Call");
             }
         });
 
