@@ -1,4 +1,4 @@
-package com.example.mcfcapp;
+package com.example.app01;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,10 +8,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.Theme_MCFCApp);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
     }
 }
