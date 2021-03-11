@@ -9,12 +9,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD:AppProgramming/app/src/main/res/layout/activity_main.xml
         android:text="TextView"
         android:textSize="35dp"
+=======
+>>>>>>> parent of 2353c43 (즐거운 앱프시간):SchoolWork/app/src/main/res/layout/activity_main.xml
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+<<<<<<< HEAD:AppProgramming/app/src/main/res/layout/activity_main.xml
         app:layout_constraintVertical_bias="0.1" />
 
     <TextView
@@ -62,5 +66,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.98" />
+=======
+        android:text="Hello World!"/>
+>>>>>>> parent of 2353c43 (즐거운 앱프시간):SchoolWork/app/src/main/res/layout/activity_main.xml
 
 </androidx.constraintlayout.widget.ConstraintLayout>
