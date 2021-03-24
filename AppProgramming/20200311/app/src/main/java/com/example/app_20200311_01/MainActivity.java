@@ -31,6 +31,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        startActivity(new Intent(this, ImageActivity.class));
+        startActivity(new Intent(this, MainActivity8.class));
     }
 }
