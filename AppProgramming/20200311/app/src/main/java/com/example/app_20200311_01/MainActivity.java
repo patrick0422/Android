@@ -16,21 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView tv3 = findViewById(R.id.tv3);
-
-        tv3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:01012341234"));
-
-                tv3.setText(tv3.getText() + " 문자 추가");
-                tv3.setTextColor(Color.RED);
-                tv3.setTextSize(50);
-
-                startActivity(intent);
-            }
-        });
-
-        startActivity(new Intent(this, MainActivity8.class));
+        startActivity(new Intent(this, MainActivity10.class));
     }
 }
