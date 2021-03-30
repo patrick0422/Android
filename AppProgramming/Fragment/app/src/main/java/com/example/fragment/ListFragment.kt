@@ -15,10 +15,7 @@ class ListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater!!.inflate(R.layout.fragment_list, container, false)
-        view.btnNext.setOnClickListener { mainActivity?.goDetail() }
-
-        return view
+        return inflater.inflate(R.layout.fragment_list, container, false)
     }
 
     override fun onAttach(context: Context) {

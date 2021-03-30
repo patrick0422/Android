@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CheckboxActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF2222"
+        android:textColor="#FFFFFF"
+        android:paddingVertical="10dp"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:text="양가네 국밥"/>
+
+    <CheckBox
+        android:id="@+id/menuSulung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="30dp"
+        android:text="설렁탕"/>
+    <CheckBox
+        android:id="@+id/menuHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="30dp"
+        android:text="소머리국밥"/>
+    <CheckBox
+        android:id="@+id/menuBlood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="30dp"
+        android:text="선지국밥"/>
+    <CheckBox
+        android:id="@+id/menuKongnamool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="30dp"
+        android:text="콩나물국밥"/>
+    <CheckBox
+        android:id="@+id/menuSoondae"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="30dp"
+        android:text="순대국밥"/>
+
+    <TextView
+        android:id="@+id/tvChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:textSize="30dp"
+        android:text="주문 내역:"/>
+</LinearLayout>
