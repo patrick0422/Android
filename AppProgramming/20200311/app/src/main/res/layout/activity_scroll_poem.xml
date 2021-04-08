@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCCCC"
+    tools:context=".ScrollPoemActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:text="
+희망가/문병란\n
+\n
+얼음장 밑에서도\n
+고기는 헤엄을 치고\n
+눈보라 속에서도\n
+매화는 꽃망울을 튼다.\n
+\n
+절망 속에서도\n
+삶의 끈기는 희망을 찾고\n
+사막의 고통 속에서도\n
+인간은 오아시스의 그늘을 찾는다.\n
+\n
+눈 덮인 겨울의 밭고랑에서도\n
+보리는 뿌리를 뻗고\n
+마늘은 빙점에서도\n
+그 매운 맛 향기를 지닌다.\n
+\n
+절망은 희망의 어머니\n
+고통은 행복의 스승\n
+시련 없이 성취는 오지 않고\n
+단련 없이 명검은 날이 서지 않는다.\n
+\n
+꿈꾸는 자여, 어둠 속에서\n
+멀리 반짝이는 별빛을 따라\n
+긴 고행길 멈추지 말라.\n
+\n
+인생항로\n
+파도는 높고\n
+폭풍우 몰아쳐 배는 흔들려도\n
+한 고비 지나면\n
+구름 뒤 태양은 다시 뜨고\n
+조용한 뱃길 순항의 내일이 꼭 찾아온다.\n"/>
+</ScrollView>

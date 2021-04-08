@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".IntroActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="15dp"
+        android:background="#88AAFF"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        android:text="우리 학교 소개"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:src="@drawable/logo_gsm"/>
+
+    <TextView
+        android:id="@+id/run1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="30dp"
+        android:layout_margin="15dp"
+        android:background="#88AAFF"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="소프트웨어\n개발과"/>
+    <TextView
+        android:id="@+id/run2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="30dp"
+        android:layout_margin="15dp"
+        android:background="#88AAFF"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="임베디드\n소프트웨어과"/>
+</LinearLayout>
