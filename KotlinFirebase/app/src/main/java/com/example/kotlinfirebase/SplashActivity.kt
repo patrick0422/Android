@@ -10,8 +10,19 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        InitConn()
+        CheckPermission()
+
         Thread.sleep(1500)
-        startActivity(Intent(this, MainActivity::class.java))
+
+        startActivity(Intent(this, LoginActivity::class.java))
         finish()
+    }
+
+    fun InitConn() {
+
+    }
+    fun CheckPermission() {
+
     }
 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SewolNewsActivity">
+
+    <TextView
+        android:id="@+id/tvhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFF00"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="세월호에 대하여"
+        android:textColor="#000000"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvhead"
+        android:src="@drawable/sewol" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="노란색 리본이 그려진 세로 형태로 제작돼 있는 배너 현수막이 바람에 펄럭이며 도로변 가로등을 수놓고 있는 풍경이 눈에 띄었다.
+현수막에는 '세월호 참사 7주기', '잊지 않고 기억하겠습니다'라는 문구가 적혀 있었다.
+화랑유원지는 세월호 참사가 일어났을 당시 희생자를 기리기 위한 정부 합동분향소가 설치됐던 곳이다.
+매년 참사 주기에 맞춰 (사)4.16세월호참사가족협의회와 4·16재단은 화랑유원지에서 기억식을 열고 있다.
+올해는 이 장소에서 '세월호 참사 7주기 기억식 및 4·16생명안전공원 선포식'을 함께 진행한다.
+2024년 완공 예정인 4·16생명안전공원은 세월호 참사를 기억하고, '생명·안전' 가치를 전 세계적으로 알리는 테마공원으로 건립될 예정이다.
+이날 화랑유원지에서 만난 주부 이모(37)씨는 세월호 참사가 발생한 지 수 년이 지났지만 여전히 그 때를 떠올리면 시민의 한 사람으로서 마음이 아프다고 희생자를 애도했다.
+이어 어린 자녀를 키우는 학부모 입장에서 세월호 참사와 같은 비극적인 사건은 앞으로 영영 일어나선 안 된다고 덧붙였다.
+세월호 참사 7주기를 앞두고 경기 안산시에 다시 희생자를 기리기 위한 추모의 물결이 일고 있다. "
+            android:textSize="30dp"/>
+    </ScrollView>
+</RelativeLayout>
