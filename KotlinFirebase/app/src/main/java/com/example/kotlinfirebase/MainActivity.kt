@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         binding.pager.adapter = ViewPagerAdapter(this)
         TabLayoutMediator(binding.tabLayout, binding.pager){tab, position->
             tab.text = tabLayoutTextArray[position]
-//            tab.setIcon(tabLayoutIconArray[position])
         }.attach()
     }
 }

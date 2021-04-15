@@ -16,6 +16,6 @@ class FixtureFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentFixtureBinding.inflate(inflater, container, false)
-        return inflater.inflate(R.layout.fragment_setting, container, false)
+        return inflater.inflate(R.layout.fragment_fixture, container, false)
     }
 }
