@@ -29,28 +29,28 @@
                 android:layout_height="60dp"
                 android:orientation="horizontal"
                 android:layout_margin="15dp"
-                android:background="#000000"/>
+                android:background="@drawable/google_style"/>
             <LinearLayout
-                android:id="@+id/Facebook"
+                android:id="@+id/btnFacebook"
                 android:layout_width="300dp"
                 android:layout_height="60dp"
                 android:orientation="horizontal"
                 android:layout_margin="15dp"
-                android:background="#000000"/>
+                android:background="@drawable/facebook_style"/>
             <LinearLayout
                 android:id="@+id/btnEmail"
                 android:layout_width="300dp"
                 android:layout_height="60dp"
                 android:orientation="horizontal"
                 android:layout_margin="15dp"
-                android:background="#000000"/>
+                android:background="@drawable/email_style"/>
             <LinearLayout
                 android:id="@+id/btnGuest"
                 android:layout_width="300dp"
                 android:layout_height="60dp"
                 android:orientation="horizontal"
                 android:layout_margin="15dp"
-                android:background="#000000"/>
+                android:background="@drawable/google_style"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
