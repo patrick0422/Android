@@ -14,21 +14,21 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        initConn()
+        // initConn()
 
-        Thread.sleep(1500)
+        Thread.sleep(1000)
 
         startActivity(Intent(this, LoginActivity::class.java))
         finish()
     }
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-        if(currentUser != null){
-            reload();
-        }
-    }
+//    public override fun onStart() {
+//        super.onStart()
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        val currentUser = auth.currentUser
+//        if(currentUser != null){
+//            reload();
+//        }
+//    }
 
     fun initConn() {
         // Initialize Firebase Auth
