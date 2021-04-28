@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
-import kotlin.concurrent.thread
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -14,24 +15,16 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // initConn()
+        auth = Firebase.auth
+//        Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
 
         Thread.sleep(1000)
+        if(currentUser != null)
+            startActivity(Intent(this, MainActivity::class.java))
+        else
+            startActivity(Intent(this, LoginActivity::class.java))
 
-        startActivity(Intent(this, LoginActivity::class.java))
         finish()
-    }
-//    public override fun onStart() {
-//        super.onStart()
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        val currentUser = auth.currentUser
-//        if(currentUser != null){
-//            reload();
-//        }
-//    }
-
-    fun initConn() {
-        // Initialize Firebase Auth
-        auth = FirebaseAuth.getInstance()
     }
 }
