@@ -7,15 +7,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:orientation="horizontal"
         android:background="#6CADDF"
         app:layout_constraintTop_toTopOf="parent">
+        <ImageButton
+            android:id="@+id/btnUser"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
 
-    </LinearLayout>
+            android:src="@drawable/ic_baseline_supervised_user_circle_24"/>
+    </RelativeLayout>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager"

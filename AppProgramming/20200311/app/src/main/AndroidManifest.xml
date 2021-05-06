@@ -11,14 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App_20200311_01">
-        <activity android:name=".SingleTouchActivity">
+        <activity android:name=".VideoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Touch2Activity"></activity>
+        <activity android:name=".SingleTouchActivity"></activity>
+        <activity android:name=".Touch2Activity" />
         <activity android:name=".TouchActivity" />
         <activity android:name=".ToggleActivity" />
         <activity android:name=".LetterActivity" />
