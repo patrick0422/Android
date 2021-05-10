@@ -1,5 +1,6 @@
 package com.example.retrofitpractice
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -27,20 +28,12 @@ class MainActivity : AppCompatActivity() {
         getPost(index)
         setContentView(binding.root)
 
-        binding.btnPrev.setOnClickListener {
-            if (index <= 1) {
-                Toast.makeText(this@MainActivity, "첫 게시물입니다.", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
-
-            getPost(--index)
-        }
-        binding.btnNext.setOnClickListener {
-            getPost(++index)
-        }
-
-
+        binding.btnPrev.setOnClickListener { getPost(--index) }
+        binding.btnNext.setOnClickListener { getPost(++index) }
+        binding.btnReturn.setOnClickListener { startActivity(Intent(this, ListActivity::class.java)) }
     }
+
+
     private fun getPost(index: Int) {
         Log.d("index", index.toString())
         service.getPost(index.toString())
@@ -57,23 +50,23 @@ class MainActivity : AppCompatActivity() {
                         binding.postContent.text = post.content
                     }
                     else {
-                        Log.d("postNull", "post is null")
+                        Log.d("getPost()", "post is null")
                         Toast.makeText(this@MainActivity, "불러오지 못했습니다.", Toast.LENGTH_SHORT).show()
                     }
                 }
 
                 override fun onFailure(call: Call<Post>, t: Throwable) {
-                    Log.d("onFailure", t.toString())
+                    Log.d("getPost()", t.toString())
                     Toast.makeText(this@MainActivity, "불러오지 못했습니다.", Toast.LENGTH_SHORT).show()
                 }
 
             })
     }
-    private fun getUser(id: Int) {
+    public fun getUser(id: Int) {
         service.getUser(id.toString())
                 .enqueue(object : Callback<User> {
                     override fun onResponse(call: Call<User>, response: Response<User>) {
-                        val user = response.body()
+                        val user = response.body() as User
 
                         binding.postWriter.text = user!!.name
                     }
