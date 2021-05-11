@@ -23,12 +23,13 @@ class ListActivity : AppCompatActivity() {
 
         binding.postView.layoutManager = LinearLayoutManager(this)
 
-        postList = initList()
+//        postList = initList()
+         postList.add(Post(13, "몰라", "그때", 5, "헤이 쥬드"))
+
         binding.postView.adapter = PostAdapter(postList)
-        binding.postView.adapter.notifyDataSetChanged()
     }
 
-    fun initList(): ArrayList<Post> {
+    private fun initList(): ArrayList<Post> {
         Toast.makeText(this@ListActivity, "getPost()", Toast.LENGTH_SHORT).show()
 
         var postList = ArrayList<Post>()
