@@ -9,18 +9,18 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class PostAdapter(var mData: ArrayList<Post>): RecyclerView.Adapter<PostAdapter.ViewHolder>() {
+class PostAdapter(var postList: ArrayList<Post>): RecyclerView.Adapter<PostAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val context = parent.context
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
         val view = inflater.inflate(R.layout.layout_post, parent, false)
 
-        return PostAdapter.ViewHolder(view)
+        return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: PostAdapter.ViewHolder, position: Int) {
-        val item = mData[position]
+        val item = postList[position]
 
         holder.title.text = item.title
         holder.time.text = item.time
@@ -28,7 +28,7 @@ class PostAdapter(var mData: ArrayList<Post>): RecyclerView.Adapter<PostAdapter.
     }
 
     override fun getItemCount(): Int {
-        return mData.size
+        return postList.size
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

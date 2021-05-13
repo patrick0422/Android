@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SubActivity1">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:src="@drawable/sub1"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="
+■ Man is what he eats. (Ludwig Feuerbach)\n
+-먹는 음식이 곧 자신이다. (루드비히 포이에르바하)\n
+\n\n
+■ There ain't no such thing as wrong food. (Sean Stewart)\n
+- 잘못된 음식이란 것은 없다. (션 스튜어트)\n
+\n\n
+■ Good food ends with good talk. (Geoffrey Neighor)\n
+-좋은 음식은 좋은 대화로 끝이 난다. (조프리 네이어)\n
+\n\n
+■ Health food makes me sick. (Calvin Trillin)\n
+-건강식품이 나를 아프게 한다. (캘빈 트릴린)\n
+\n\n
+■ Food is the most primitive form of comfort. (Sheila Graham)\n
+-음식은 가장 원시적인 형태의 위안거리다. (쉴라 그레이엄)\n
+\n\n
+■ Food is our common ground, a universal experience. (James Beard)\n
+-음식은 우리의 공통점이요, 보편적 경험이다. (제임스 비어드)\n
+\n\n
+■ What is food to one, is to dthers bitter poison. (Lucretius)\n
+-누군가에게는 음식인 것이 다른 이에게는 쓴 독이다. (루크레티우스)\n
+\n\n
+■ There is no love sincerer than the love of food. (George Bernard Shaw)\n
+-음식에 대한 사랑보다 더 진실된 사랑은 없다. (조지 버나드 쇼)\n
+\n\n
+■ Never eat more than you can lift. (Miss Piggy)\n
+-들어 옮길 수 있는 양보다 많이 먹지 말라. (미스 피기)\n
+\n\n
+■ If you can't feed a hundred people, then feed just one. (Mother Teresa)\n
+-백 사람을 먹일 수 없다면 한 사람이라도 먹여라. (마더 테레사)\n
+\n\n
+■ Part of the secret of success in life is to eat what you like and let the food fight it out inside. (Mark Twain)\n
+-인생에서 성공하는 비결 중 하나는 좋아하는 음식을 먹고 힘내 싸우는 것이다. (마크 트웨인)\n"
+            android:textSize="20dp"/>
+    </ScrollView>
+</LinearLayout>

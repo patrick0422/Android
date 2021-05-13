@@ -19,20 +19,20 @@ class ListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list)
+        setContentView(binding.root)
 
-        binding.postView.layoutManager = LinearLayoutManager(this)
 
-//        postList = initList()
-         postList.add(Post(13, "몰라", "그때", 5, "헤이 쥬드"))
+
+        initList()
+
+        for(i in 1..20)
+            postList.add(Post(i, "제목: $i", "시간: $i", i, "내용: $i"))
 
         binding.postView.adapter = PostAdapter(postList)
+        binding.postView.layoutManager = LinearLayoutManager(this)
     }
 
-    private fun initList(): ArrayList<Post> {
-        Toast.makeText(this@ListActivity, "getPost()", Toast.LENGTH_SHORT).show()
-
-        var postList = ArrayList<Post>()
+    private fun initList() {
         val service = Retrofit.Builder()
                 .baseUrl("https://my-json-server.typicode.com/patrick0422/myJSON/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -41,15 +41,17 @@ class ListActivity : AppCompatActivity() {
         service.getPosts()
                 .enqueue(object : Callback<ArrayList<Post>> {
                     override fun onResponse(call: Call<ArrayList<Post>>, response: Response<ArrayList<Post>>) {
-                        if (response.isSuccessful)
-                            postList = response.body() as ArrayList<Post>
+                        if (response.isSuccessful) {
+//                            postList = response.body() as ArrayList<Post>
+                            binding.postView.adapter = PostAdapter(response.body() as ArrayList<Post>)
+
+                            Log.d("getPost()", "$postList, SIZE: ${postList.size}")
+                        }
                     }
                     override fun onFailure(call: Call<ArrayList<Post>>, t: Throwable) {
                         Log.d("getPost()", t.toString())
                         Toast.makeText(this@ListActivity, "불러오지 못했습니다.", Toast.LENGTH_SHORT).show()
                     }
                 })
-
-        return postList
     }
 }
