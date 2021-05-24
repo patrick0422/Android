@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Build a GoogleSignInClient with the options specified by gso.
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
+        
 
         binding.btnGoogle.setOnClickListener { loginWithGoogle() }
     }
