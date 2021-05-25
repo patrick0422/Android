@@ -1,9 +1,12 @@
 package com.example.kotlinfirebase
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
 import com.example.kotlinfirebase.databinding.ActivityUserBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -32,6 +35,13 @@ class UserActivity : AppCompatActivity() {
         else
             startActivity(Intent(this, LoginActivity::class.java))
 
-        binding.btnLogout.setOnClickListener {  }
+        binding.btnLogout.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("로그아웃").setMessage("정말로 로그아웃 하시겠습니까?")
+
+            builder.setPositiveButton("예") { _: DialogInterface, _: Int -> Toast.makeText(this, "로그아웃되었습니다.", Toast.LENGTH_SHORT).show() }
+
+            builder.create().show()
+        }
     }
 }
