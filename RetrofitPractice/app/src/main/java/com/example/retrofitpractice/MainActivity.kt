@@ -42,8 +42,8 @@ class MainActivity : AppCompatActivity() {
                     val post = response.body()
 
                     if (post != null) {
-                        binding.postTitle.text = post.title
                         getUser(post.id)
+                        binding.postTitle.text = post.title
                         binding.postDate.text = post.time
                         binding.postContent.text = post.content
                     }
@@ -60,8 +60,8 @@ class MainActivity : AppCompatActivity() {
 
             })
     }
-    fun getUser(id: Int) {
-        var user: User
+    fun getUser(id: Int): User? {
+        var user = User(-1, "user", "1234")
         service.getUser(id.toString())
                 .enqueue(object : Callback<User> {
                     override fun onResponse(call: Call<User>, response: Response<User>) {
@@ -76,5 +76,6 @@ class MainActivity : AppCompatActivity() {
                     }
 
                 })
+        return user
     }
 }
