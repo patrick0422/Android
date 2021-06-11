@@ -8,6 +8,8 @@ import com.example.roomdb.databinding.ActivityChatBinding
 class ChatActivity : AppCompatActivity() {
     lateinit var binding: ActivityChatBinding
 
+    var chatList = ArrayList<Chat>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
@@ -15,6 +17,6 @@ class ChatActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_chat)
         binding.chat = this
 
-        binding.chatList.
+        binding.chatList.adapter = ChatAdapter(chatList)
     }
 }

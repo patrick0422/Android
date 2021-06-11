@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App_20200311_01">
+        <activity android:name=".KotlinButtonActivity"></activity>
         <activity android:name=".KotlinActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".VideoActivity"></activity>
+        <activity android:name=".VideoActivity" />
         <activity android:name=".SingleTouchActivity" />
         <activity android:name=".Touch2Activity" />
         <activity android:name=".TouchActivity" />

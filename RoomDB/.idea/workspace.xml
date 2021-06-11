@@ -7,57 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="425c9c01-8878-4b07-a6d3-5a6118ac2559" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../AppProgramming/20200311/app/src/main/java/com/example/app_20200311_01/KotlinActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AppProgramming/20200311/app/src/main/res/layout/activity_kotlin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/ChatActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/ChatAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/Dao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/DataBase.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/UserDataBase.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_chat.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_chat.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/java/com/example/whencity/Fixture.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/java/com/example/whencity/FixtureWidget.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/drawable-nodpi/example_appwidget_preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/drawable/ic_chl.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/drawable/ic_mci.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/drawable/ic_mun.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/drawable/widget_style.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/layout/fixture_widget_1x3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/layout/fixture_widget_1x4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/values/attrs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/xml/fixture_widget_info.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppProgramming/20200311/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../AppProgramming/20200311/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppProgramming/20200311/app/src/main/java/com/example/app_20200311_01/KotlinButtonActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppProgramming/20200311/app/src/main/res/layout/activity_kotlin_button.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/Chat.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AppProgramming/20200311/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AppProgramming/20200311/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppProgramming/20200311/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../AppProgramming/20200311/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RetrofitPractice/app/src/main/java/com/example/retrofitpractice/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../RetrofitPractice/app/src/main/java/com/example/retrofitpractice/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WhenCity/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WhenCity/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WhenCity/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WhenCity/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WhenCity/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../WhenCity/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WhenCity/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WhenCity/app/src/main/java/com/example/whencity/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/java/com/example/whencity/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WhenCity/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WhenCity/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WhenCity/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WhenCity/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WhenCity/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WhenCity/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyRecyclerView/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRecyclerView/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/ChatActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/ChatActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/ChatAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/ChatAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhenCity/app/src/main/java/com/example/whencity/FixtureWidget.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/java/com/example/whencity/FixtureWidget.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[ce021712ad286c1d0c]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -92,6 +57,9 @@
   </component>
   <component name="RecentsManager">
     <key name="android.template.1336349921">
+      <recent name="com.example.roomdb" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
       <recent name="com.example.roomdb" />
     </key>
   </component>
