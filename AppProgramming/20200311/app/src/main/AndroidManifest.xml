@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App_20200311_01">
-        <activity android:name=".KotlinButtonActivity"></activity>
+        <activity android:name=".KotlinImageViewActivity"></activity>
+        <activity android:name=".KotlinButtonActivity" />
         <activity android:name=".KotlinActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
