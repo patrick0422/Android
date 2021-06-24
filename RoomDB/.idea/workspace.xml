@@ -7,15 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="425c9c01-8878-4b07-a6d3-5a6118ac2559" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../AppProgramming/20200311/app/src/main/java/com/example/app_20200311_01/KotlinButtonActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AppProgramming/20200311/app/src/main/res/layout/activity_kotlin_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/Chat.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppProgramming/20200311/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AppProgramming/20200311/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyRecyclerView/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRecyclerView/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/ChatActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/ChatActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/ChatAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/roomdb/ChatAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WhenCity/app/src/main/java/com/example/whencity/FixtureWidget.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../WhenCity/app/src/main/java/com/example/whencity/FixtureWidget.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
