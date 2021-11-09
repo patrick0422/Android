@@ -7,18 +7,18 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerPostAdapter(private var postList: ArrayList<Post>) : RecyclerView.Adapter<RecyclerPostAdapter.ViewHolder>() {
+class RecyclerPostAdapter(private var postList: ArrayList<Post>) : RecyclerView.Adapter<MyViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerPostAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val context = parent.context
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
         val view = inflater.inflate(R.layout.layout_post, parent, false)
 
-        return ViewHolder(view)
+        return MyViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         var post = postList[position]
 
         holder.title.text = post.title
@@ -26,13 +26,12 @@ class RecyclerPostAdapter(private var postList: ArrayList<Post>) : RecyclerView.
         holder.writer.text = post.writer.toString()
     }
 
-    override fun getItemCount(): Int {
-        return postList.size
-    }
+    override fun getItemCount(): Int = postList.size
 
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        var title: TextView = view.findViewById(R.id.postTitle)
-        val time: TextView = view.findViewById(R.id.postTime)
-        val writer: TextView = view.findViewById(R.id.postWriter)
-    }
+}
+
+class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    var title: TextView = view.findViewById(R.id.postTitle)
+    val time: TextView = view.findViewById(R.id.postTime)
+    val writer: TextView = view.findViewById(R.id.postWriter)
 }

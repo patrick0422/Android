@@ -25,7 +25,7 @@ class DummyData {
         )
         @SuppressLint("NewApi")
         val postList = listOf<Post>(
-            Post(userList[0], LocalDateTime.now(), "조직문화를 좋아하는 임창규씨.", 55, commentList, commentList.size),
+            Post(userList[0], LocalDateTime.now(), "조직문화를 좋아하는 임창규씨. 화제가 되고 있다는데, 이게 사실일까?", 55, commentList, commentList.size),
             Post(userList[0], LocalDateTime.now(), "TMI) 아무거나 뒤에 창을 붙이면 말이 된다", 63, commentList, commentList.size),
             Post(userList[0], LocalDateTime.now(), "디디순살양념", 81, commentList, commentList.size),
             Post(userList[0], LocalDateTime.now(), "강약중간약", 7, commentList, commentList.size),

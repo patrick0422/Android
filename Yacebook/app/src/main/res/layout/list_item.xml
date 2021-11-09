@@ -76,7 +76,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#FFFFFFFF"
+                android:background="@drawable/button_style"
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:text="좋아요"/>
@@ -84,7 +84,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#FFFFFFFF"
+                android:background="@drawable/button_style"
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:text="댓글 달기"/>
@@ -92,7 +92,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#FFFFFFFF"
+                android:background="@drawable/button_style"
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:text="보내기"/>
